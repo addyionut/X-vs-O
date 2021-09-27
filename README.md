@@ -1,2 +1,2 @@
 # X-vs-O
-Tic Tac Toe game
+Tic Tac Toe - 2 player game
