@@ -4,8 +4,8 @@ var playerTurn = "X";
 var gameOver = false;
 var charNumbers = 0;
 var buttons = [["", "", ""], 
-			   ["", "", ""], 
-			   ["", "", ""]];
+	       ["", "", ""], 
+	       ["", "", ""]];
 gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 
 function currentPlayer() {
@@ -31,7 +31,7 @@ function winningCases() {
 		else {
 			if (buttons[i][i] === "X" || buttons[i][i] === "O") {
 				if ((buttons[i][j] == buttons[i][j + 1] && buttons[i][j + 1] == buttons[i][j + 2]) ||
-            	(buttons[j][i] == buttons[j + 1][i] && buttons[j + 1][i] == buttons[j + 2][i])) {
+            			(buttons[j][i] == buttons[j + 1][i] && buttons[j + 1][i] == buttons[j + 2][i])) {
 					gameStatusMessage.innerHTML = "The player " + playerTurn + " won!";
 					document.querySelectorAll('.box').forEach(cell => cell.disabled = true);
 					gameOver = true;
@@ -64,8 +64,8 @@ function restartGame() {
 	playerTurn = "X";
 	gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 	buttons = [["", "", ""], 
-			   ["", "", ""], 
-			   ["", "", ""]];
+		   ["", "", ""], 
+	           ["", "", ""]];
 	charNumbers = 0;
 	document.querySelectorAll('.box').forEach(cell => cell.innerHTML = "");
 	document.querySelectorAll('.box').forEach(cell => cell.disabled = false);
