@@ -1,0 +1,49 @@
+html {
+	background-color: grey;
+	text-align: center;
+	
+}
+
+body {
+	font-style: sans-serif;
+}
+
+h1 {
+	font-size: 60px;
+	color: yellow;
+}
+
+.restartGame {
+	height:50px;
+    width:220px;
+  	font: sans-serif;
+  	font-size: 25px;
+ 	font-weight: bold;
+ 	background-color: green;	
+}
+
+.box {
+	background-color: yellow;
+	color: #fff;
+	padding: 25px;
+	font-size: 250%;
+	font-family: cursive;
+	color: black;
+	text-align: center;
+	vertical-align: center;
+	text-align: inherit;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+#gameMessage {
+	font-size: 40px;
+	font-style: italic;;
+	color: #DDD;
+}
