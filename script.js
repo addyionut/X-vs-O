@@ -11,11 +11,9 @@ gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 function currentPlayer() {
 	if (playerTurn === "X") {
 		playerTurn = "O";
-		gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 		return playerTurn;
 	}
 	playerTurn = "X";
-	gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 	return playerTurn;
 }
 
@@ -28,14 +26,12 @@ function winningCases() {
 			document.querySelectorAll('.box').forEach(cell => cell.disabled = true);
 			gameOver = true;
 		}
-		else {
-			if (buttons[i][i] === "X" || buttons[i][i] === "O") {
-				if ((buttons[i][j] == buttons[i][j + 1] && buttons[i][j + 1] == buttons[i][j + 2]) ||
-            			(buttons[j][i] == buttons[j + 1][i] && buttons[j + 1][i] == buttons[j + 2][i])) {
-					gameStatusMessage.innerHTML = "The player " + playerTurn + " won!";
-					document.querySelectorAll('.box').forEach(cell => cell.disabled = true);
-					gameOver = true;
-				}
+		else if (buttons[i][i] === "X" || buttons[i][i] === "O") {
+			if ((buttons[i][j] == buttons[i][j + 1] && buttons[i][j + 1] == buttons[i][j + 2]) ||
+			(buttons[j][i] == buttons[j + 1][i] && buttons[j + 1][i] == buttons[j + 2][i])) {
+				gameStatusMessage.innerHTML = "The player " + playerTurn + " won!";
+				document.querySelectorAll('.box').forEach(cell => cell.disabled = true);
+				gameOver = true;
 			}
 		}
 	}
@@ -56,6 +52,7 @@ function managePressedButtons(id) {
 	}
 	else {
 		currentPlayer();
+		gameStatusMessage.innerHTML = "It's player " + playerTurn + "'s turn";
 	}
 }  
 
